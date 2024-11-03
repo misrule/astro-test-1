@@ -17,6 +17,11 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav>
+			<a href="/">Home</a>
+			<a href="/about">About</a>
+			<a href="/blog">Blog</a>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -46,5 +51,15 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	nav {
+		background: rgba(var(--accent), 0.1);
+		color: #fff;
+		padding: 1rem;
+		a {
+			color: #fff;
+			text-decoration: none;
+			margin-right: 1rem;
+		}
 	}
 </style>
